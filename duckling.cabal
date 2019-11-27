@@ -24,7 +24,8 @@ cabal-version:       >=1.10
 tested-with:
   GHC==8.0.2,
   GHC==8.2.2,
-  GHC==8.6.5
+  GHC==8.6.5,
+  GHC==8.8.1
 
 extra-source-files:    README.md
 
@@ -816,6 +817,7 @@ library
 test-suite duckling-test
   type:                exitcode-stdio-1.0
   main-is:             TestMain.hs
+  ghc-options:         -main-is TestMain
   hs-source-dirs:      tests
   build-depends:       duckling
                      , base
